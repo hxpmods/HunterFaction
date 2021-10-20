@@ -169,7 +169,6 @@ namespace HunterFaction
             template = Instantiate(template);
 
             //We get a reference to the in game hunter template.
-            //There is also an in game hunter prefab, but we copy the old one instead
             var hunterTemplate = NpcTemplate.GetByName("MonsterHunterNpc 1");
 
             //We set our copied templates appearances to the hunter's appearance
@@ -199,18 +198,17 @@ namespace HunterFaction
 
                 //Set our prefabparts prefab to our new prefab
                 prefabPart.prefab = prefab;
-
+                
+                //I feel awkward explaining this one.
                 template.appearance.breastSize = new PartContainerGroup<Npc.Parts.Appearance.Breast>();
 
             }
-
-            //prefab.prefab = Instantiate(prefab.prefab);
            
-
+            //Set our templates prefab to the one we made.
             template.baseParts[0] = prefabPart;
-            //We add our hunterQuests to the second index in our template.
+            //Set our templates quests to hunter quests.
             template.baseParts[1] = hunterQuests;
-
+            //The above works as we are replacing the templates prefab and quests at those index's
 
             return template;
         }
