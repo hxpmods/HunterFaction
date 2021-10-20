@@ -1,5 +1,5 @@
 # HunterFaction
-A mod for Potion Craft adding a Hunter faction based on the vanilla Hunter Character. Uses BasicMod.
+A mod for Potion Craft adding a Hunter faction based on the vanilla Hunter Character. Uses BasicMod (https://github.com/hxpmods/BasicMod/releases).
 
 The code is commented with some of my findings while looking into the NpcSystem, please feel free to use it as a basis for adding your own factions.
 
